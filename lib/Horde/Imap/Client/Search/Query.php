@@ -851,7 +851,7 @@ class Horde_Imap_Client_Search_Query implements Serializable
      */
     public function previousSearch($not = false, array $opts = array())
     {
-        $this->_search['prevsearch'] = $not;
+        $this->_search['prevsearch'] = !$not;
         if (!empty($opts['fuzzy'])) {
             $this->_search['prevsearchfuzzy'] = true;
         }
